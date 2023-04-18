@@ -1,0 +1,29 @@
+{
+  "plants": [
+    {
+      "name": "Valerie",
+      "needs": 1,
+      "resilience": 3
+    },
+    {
+      "name": "Mary",
+      "needs": 2,
+      "resilience": 3
+    },
+    {
+      "name": "Katie",
+      "needs": 2,
+      "resilience": 3
+    },
+    {
+      "name": "Dean",
+      "needs": 1,
+      "resilience": 3
+    },
+    {
+      "name": "Kurt",
+      "needs": 3,
+      "resilience": 2
+    }
+  ]
+}
