@@ -1,23 +1,27 @@
+import {useState,useEffect} from 'react';
+import {getPlants} from './api'
 import logo from './logo.svg';
-import './App.css';
 
 function App() {
+  const [plants, setPlants] = useState([])
+
+ useEffect(() => {
+   getPlants()
+   .then((body) => body.json())
+   .then(setPlants)
+ }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <div className="bg-gray-800 text-white">
+      <header>
+        <img src={logo} className="max-h-[10rem] mx-auto my-2" alt="logo" />
+        <p className='text-xl font-light text-center'>
+          Splash
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <div>
+        {plants.map(p => <div>{p.name}</div>)}
+      </div>
     </div>
   );
 }

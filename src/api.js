@@ -1,0 +1,1 @@
+export const getPlants = () => fetch("http://localhost:3001/plants")
